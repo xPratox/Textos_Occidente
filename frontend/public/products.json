@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Laptop", "price": 1200, "color": "Gris", "size": "15 pulgadas" },
+    { "id": 2, "name": "Mouse", "price": 50, "color": "Negro", "size": "Pequeño" },
+    { "id": 3, "name": "Smartphone", "price": 800, "color": "Negro", "size": "6.5 pulgadas" },
+    { "id": 4, "name": "Teclado", "price": 100, "color": "Blanco", "size": "Mediano" },
+    { "id": 5, "name": "Monitor", "price": 300, "color": "Negro", "size": "24 pulgadas" }
+  ]
+  

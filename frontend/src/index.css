@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	color: #0f172a;
+	background-color: #f1f5f9;
+	font-family: "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	background:
+		radial-gradient(circle at top left, rgba(148, 163, 184, 0.16), transparent 32%),
+		radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 26%),
+		#f1f5f9;
+	color: #0f172a;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+.hide-number-spin::-webkit-outer-spin-button,
+.hide-number-spin::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.hide-number-spin[type="number"] {
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+

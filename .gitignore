@@ -1,0 +1,26 @@
+**/requeriments.txt
+
+# Python virtual environments
+env/
+backend/env/
+.venv/
+venv/
+
+# Python caches and artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Frontend dependencies and builds
+node_modules/
+frontend/dist/
+
+# Local environment files
+.env
+.env.*
+
+# Uploaded/generated local files
+uploads/
