@@ -1,6 +1,6 @@
 static_sites:
   - name: textosoccidentes
-    buildCommand: npm run build
+    buildCommand: VITE_API_URL=https://textos-occidente.onrender.com npm run build
     publishPath: dist
     routes:
       - type: rewrite
