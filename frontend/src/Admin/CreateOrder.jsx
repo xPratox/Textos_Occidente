@@ -298,7 +298,6 @@ const CreateOrder = ({ onAddOrder, initialOrder, onClose }) => {
             >
               <option value="pendiente">Pendiente</option>
               <option value="confirmado">Confirmado</option>
-              <option value="cancelado">Cancelado</option>
             </select>
           </div>
 

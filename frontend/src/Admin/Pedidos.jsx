@@ -19,7 +19,7 @@ const Pedidos = () => {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
-      setOrders(data);
+      setOrders(data.filter((order) => order.estado !== "cancelado"));
     } catch (err) {
       console.error("Error cargando pedidos:", err);
       setError("No se pudieron cargar los pedidos. Por favor, intente de nuevo.");
@@ -47,13 +47,11 @@ const Pedidos = () => {
     return date.toLocaleDateString() + " " + date.toLocaleTimeString();
   };
 
-  // Función para actualizar el estado de un pedido (CONFIRMADO/CANCELADO)
+  // Función para actualizar el estado de un pedido a confirmado
   const handleUpdateOrderStatus = async (orderId, newStatus) => {
     let confirmationMessage = "";
     if (newStatus === "confirmado") {
       confirmationMessage = "¿Estás seguro de que deseas CONFIRMAR este pedido? Esto aumentará el stock de los productos.";
-    } else if (newStatus === "cancelado") {
-      confirmationMessage = "¿Estás seguro de que deseas CANCELAR este pedido? No se modificará el stock.";
     }
 
     if (!window.confirm(confirmationMessage)) {
@@ -212,13 +210,6 @@ const Pedidos = () => {
                               title="Marcar como Recibido (Confirmar)"
                             >
                               ✅ Recibido
-                            </button>
-                            <button
-                              onClick={() => handleUpdateOrderStatus(order.id, 'cancelado')}
-                              className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 text-xs transition-colors duration-200"
-                              title="Cancelar Pedido"
-                            >
-                              ❌ Cancelar
                             </button>
                             <button
                               onClick={() => handleDeleteOrder(order.id)}
